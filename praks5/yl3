@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo -n "Mis päeval lähed puhkusele?: "
+read paevad
+
+echo -n "Kui kauaks lähed puhkama?: "
+read aeg
+
+#leiame mitu reisipäeva jääb alles
+reisipaevad=$(($paevad % 7))
+
+tagasi=$(($aeg + $reisipaevad))
+
+echo "Jõuad reisilt tagasi päeval number $tagasi."
