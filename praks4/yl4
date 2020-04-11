@@ -1,0 +1,14 @@
+!#/bin/bash
+
+echo -n "Sisesta reisijate arv:" #peab esitama reisijate arvu
+read reisijad #vastab reisijate arvule
+echo -n "Sisesta kohtade arv bussis:" #peab vastama kohtade arvule bussis
+read kohad #vastab kohtade arvule bussis
+
+bussid=`expr $reisijad / $kohad` #string bussid,mis jagab reisijate arvu kohtade arvuga
+ylejaanud=`expr $reisijad % $kohad`
+
+echo "Vaja on $bussid täisbussi ja sellega jääb $ylejaanud inimest ilma kohata."
+
+#skirpti lõpp
+
