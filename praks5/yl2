@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "Sisesta kolmnurga külg a: " a
+read -p "Sisesta kolmnurga külg b: " b
+read -p "Sisesta kolmnurga kolmas külg c: " c
+
+#arvutab pool kolmnurga ümbermõõdust
+P=$(bc <<< "scale=1; ($a + $b + $c)/2")
+
+#arvutab pindala Heroni valemiga
+S=$(bc <<< "scale=2; sqrt(($P-$a)*($P-$b)*($P-$c)*$P)")
+
+echo "Kolmnurga pindala on "$S.
