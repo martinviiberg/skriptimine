@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#küsib külgede a ja b väärtused
+read -p "Sisesta külje a väärtus:" a
+read -p "Sisesta külje b väärtus:" b
+
+#hüpotenuusi arvutus
+let "c= $a * $a + $b * $b"
+
+#võtab hüpotenuusi ruutjuure
+d=$(bc <<< "scale=2; sqrt($c)")
+echo "Hüpotenuus on "$d
+
+
