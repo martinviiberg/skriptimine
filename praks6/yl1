@@ -7,7 +7,7 @@ read arv
 jaak=$(($arv % 2))
 
 #tingimus, kas jääk on paaris või paaritu
-if [$jaak === 0]
+if test $jaak -eq 0
 then
 	echo $arv" on paaris"
 else
