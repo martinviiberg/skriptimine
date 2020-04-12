@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Sisesta reisijate arv: "
+read reisijad
+
+echo "Sisesta istekohtade arv: "
+read istekohad
+
+#arvutab mitu bussi saab täis 
+bussid=$(($reisijad / $istekohad))
+
+#arvutab mitu reisijat jääb maha
+maha=$(($reisijad % $istekohad))
+
+if test $maha -gt 0
+then
+	bussid=$(($bussid + 1))
+fi
+
+echo "Kokku on vaja $bussid täisbussi"
+
