@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#10 esimest järjestikust arvu, liidab ainult paarisarvud
+
+summa=0
+for (( arv=1; arv<=10; arv++))
+do
+	jaak=$(($arv % 2))
+	if [ $jaak -eq 0 ]; then
+		summa=$(($summa + $arv))
+		echo $summa
+	fi
+done
+echo "Arvude vahemikus 0 kuni 10 (kaasaarvatud) paarisarvude summa on: $summa."
